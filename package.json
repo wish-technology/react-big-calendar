@@ -11,7 +11,9 @@
     "lib/",
     "LICENSE",
     "README.md",
-    "CHANGELOG.md"
+    "CHANGELOG.md",
+    "src/",
+    ".babelrc"
   ],
   "keywords": [
     "scheduler",
@@ -34,7 +36,8 @@
     "storybook": "start-storybook -p 9002",
     "test": "npm run lint",
     "tdd": "karma start",
-    "release": "release"
+    "release": "release",
+    "postinstall": "postinstall-build lib \"npm run build\""
   },
   "peerDependencies": {
     "react": "^0.14.0 || ^15.0.0",
@@ -85,6 +88,7 @@
     "dom-helpers": "^2.3.0 || ^3.0.0",
     "invariant": "^2.1.0",
     "lodash": "^4.17.4",
+    "postinstall-build": "^2.0.0",
     "react-overlays": "^0.6.0",
     "react-prop-types": "^0.4.0",
     "uncontrollable": "^3.3.1 || ^4.0.0",
